@@ -3,6 +3,7 @@ package tree;
 import java.util.ArrayList;
 
 public class N_98 {
+    //根据中序遍历的二叉搜索树是一个有序序列判断
     ArrayList<Integer> tree = new ArrayList<>();
     public boolean isValidBST(TreeNode root) {
         traverse(root);
