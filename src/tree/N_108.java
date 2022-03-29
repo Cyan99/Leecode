@@ -6,7 +6,7 @@ public class N_108 {
     }
 
     public TreeNode traverse(int[] nums, int left, int right){
-        if(left >= right){
+        if(left > right){
             return null;
         }
         int rootPos = (right - left)/2 + left;
