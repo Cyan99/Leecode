@@ -31,9 +31,9 @@ public class N_216 {
             sum -= single.pollLast();
         }
     }
-    public static void main(String[] args) {
-        N_216 test = new N_216();
-        test.combinationSum3(3,7);
-        System.out.println(result);
-    }
+//    public static void main(String[] args) {
+//        N_216 test = new N_216();
+//        test.combinationSum3(3,7);
+//        System.out.println(result);
+//    }
 }
