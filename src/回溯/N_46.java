@@ -6,11 +6,11 @@ import java.util.List;
 public class N_46 {
     List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
-        backTrack(nums,0, new ArrayList<>(), new int[21]);
+        backTrack(nums, new ArrayList<>(), new int[21]);
         return result;
     }
 
-    public void backTrack(int[] nums, int startIndex, List<Integer> single, int[] used){
+    public void backTrack(int[] nums, List<Integer> single, int[] used){
         if(single.size() == nums.length){
             result.add(new ArrayList<>(single));
             return;
@@ -21,7 +21,7 @@ public class N_46 {
             }else{
                 used[i + 10] = 1;
                 single.add(nums[i]);
-                backTrack(nums, i+1, single,used);
+                backTrack(nums,  single,used);
                 single.remove(single.size()-1);
                 used[i+10] = 0;
             }
