@@ -6,7 +6,7 @@ import java.util.List;
 public class N_46 {
     List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
-        backTrack(nums, new ArrayList<>(), new int[21]);
+        backTrack(nums, new ArrayList<>(), new int[nums.length]);
         return result;
     }
 
@@ -16,14 +16,14 @@ public class N_46 {
             return;
         }
         for(int i = 0; i < nums.length; i++){
-            if(used[i+10] == 1 ){
+            if(used[i] == 1 ){
                 continue;
             }else{
-                used[i + 10] = 1;
+                used[i] = 1;
                 single.add(nums[i]);
                 backTrack(nums,  single,used);
                 single.remove(single.size()-1);
-                used[i+10] = 0;
+                used[i] = 0;
             }
 
         }
