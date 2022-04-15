@@ -7,17 +7,11 @@ public class N_455 {
         Arrays.sort(g);
         Arrays.sort(s);
         int result = 0;
-        int flag = g.length;
-        for(int i = s.length - 1; i >= 0; i--){
-            if(flag == 0){
-                return result;
-            }
-            for(int j = flag-1; j >= 0; j--){
-                if(s[i] >= g[j]){
-                    result++;
-                    flag = j;
-                    break;
-                }
+        int flag = s.length - 1;
+        for(int i = g.length - 1; i >= 0; i--){
+            if(flag>=0 && s[flag] >= g[i]){
+                result++;
+                flag--;
             }
         }
         return result;
